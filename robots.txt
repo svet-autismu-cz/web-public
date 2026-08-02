@@ -1,0 +1,16 @@
+# Svět autismu — robots.txt
+#
+# POZOR: Web zatím neběží naostro na produkční doméně, proto je
+# indexace dočasně zablokovaná (Disallow: /) a všechny stránky mají
+# navíc <meta name="robots" content="noindex, nofollow">.
+#
+# Až bude web spuštěný naostro na www.svetautismu.cz:
+#   1. smaž řádek "Disallow: /" níže (nebo ho nahraď prázdným Disallow:)
+#   2. z public/*.html smaž <meta name="robots" content="noindex, nofollow">
+#   3. v Google Search Console / Bing Webmaster Tools odešli Sitemap níže
+#      a požádej o překrawlování hlavní stránky
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.svetautismu.cz/sitemap.xml
