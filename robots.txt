@@ -1,24 +1,19 @@
 # Svět autismu — robots.txt
 #
-# POZOR: Web zatím neběží naostro na produkční doméně, proto je
-# indexace dočasně zablokovaná (Disallow: /) a všechny stránky mají
-# navíc <meta name="robots" content="noindex, nofollow">.
+# Indexace je od 9. 8. 2026 povolená. Prázdný Disallow znamená "neblokuj nic";
+# je to platný způsob, jak povolit celý web, a je čitelnější než ten řádek
+# smazat úplně.
 #
-# Doména www.svetautismu.cz běží od 9. 8. 2026, ale indexace zůstává
-# zablokovaná, dokud klient neodsouhlasí obsah. Až na to dojde:
-#   1. smaž řádek "Disallow: /" níže (nebo ho nahraď prázdným Disallow:)
-#   2. ze stránek smaž <meta name="robots" content="noindex, nofollow">
-#      POZOR: 404.html VYNECHEJ — chybová stránka si noindex ponechá,
-#      nemá co dělat ve výsledcích vyhledávání
-#   3. v Google Search Console / Bing Webmaster Tools odešli Sitemap níže
-#      a požádej o překrawlování hlavní stránky
+# Výjimka: web-root/404.html si ponechává <meta name="robots" content="noindex">
+# přímo ve stránce. Chybová stránka nemá co dělat ve výsledcích vyhledávání
+# a přes robots.txt se to řešit nedá — zákaz procházení by vyhledávači jen
+# zabránil ten pokyn přečíst.
 #
-# Než se indexace pustí, měly by být vyřešené staré adresy původního webu
-# (/rana-pece, /cenik-sluzeb …), které se do redesignu nepřevzaly a teď
-# vrací 404 — jinak Google zaindexuje web ve chvíli, kdy odkazy padají
-# do prázdna.
+# Přesměrování ze starých adres (web-root/*/index.html) se záměrně neblokují.
+# Musí být procházitelná, jinak se přes ně nepřenese hodnocení starých adres
+# na nové stránky.
 
 User-agent: *
-Disallow: /
+Disallow:
 
 Sitemap: https://www.svetautismu.cz/sitemap.xml
