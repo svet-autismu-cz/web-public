@@ -103,6 +103,7 @@
   ]
 }
 </script>
+<script src="site.js" defer></script>
 </head>
 <body>
 
@@ -118,18 +119,6 @@
     </div>
   </div>
 </header>
-<script>
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('mainNav');
-  if (!toggle || !nav) return;
-  toggle.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-})();
-</script>
 
 <section class="page-hero">
   <div class="page-hero-rainbow"></div>
@@ -151,7 +140,7 @@
   </div>
 </section>
 
-<footer class="site-footer"><div class="footer-bottom"><span>© 2026 Svět autismu</span><div class="footer-bottom-links"><a href="clanky.html">Aktuality</a><a href="kontakt.html">Kontakt</a></div></div><div class="footer-rainbow"></div></footer>
+<footer class="site-footer"><div class="footer-bottom"><span>© 2026 Svět autismu</span><div class="footer-bottom-links"><a href="clanky.html">Aktuality</a><a href="kontakt.html">Kontakt</a><a href="#" data-cookie-settings>Nastavení cookies</a></div></div><div class="footer-rainbow"></div></footer>
 
 </body>
 </html>

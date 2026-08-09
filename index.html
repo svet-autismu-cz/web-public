@@ -1117,6 +1117,7 @@ section { padding: 72px 0; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 </style>
+<script src="site.js" defer></script>
 </head>
 <body>
 
@@ -1168,18 +1169,6 @@ section { padding: 72px 0; }
     </div>
   </div>
 </header>
-<script>
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('mainNav');
-  if (!toggle || !nav) return;
-  toggle.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-})();
-</script>
 
 <!-- ===== HERO (nautis.cz + adra.cz slider inspired) ===== -->
 <section class="hero">
@@ -1516,7 +1505,7 @@ section { padding: 72px 0; }
 </section>
 
 <!-- ===== KONTAKTY S MAPKAMI PROVOZOVEN ===== -->
-<section class="contacts" id="kontakty">
+<section class="contacts" id="contacts">
   <div class="section-inner">
     <div class="section-header">
       <span class="section-label">Kontakty</span>
@@ -1646,6 +1635,7 @@ section { padding: 72px 0; }
       <a href="ochrana-osobnich-udaju.html" style="color: #555; transition: color .2s;" onmouseover="this.style.color='#4a90d9'" onmouseout="this.style.color='#555'">Ochrana osobních údajů</a>
       <a href="nabidka-prace.html" style="color: #555; transition: color .2s;" onmouseover="this.style.color='#4a90d9'" onmouseout="this.style.color='#555'">Kariéra</a>
       <a href="kontakt.html" style="color: #555; transition: color .2s;" onmouseover="this.style.color='#4a90d9'" onmouseout="this.style.color='#555'">Kontakt</a>
+      <a href="#" data-cookie-settings style="color: #555; transition: color .2s;" onmouseover="this.style.color='#4a90d9'" onmouseout="this.style.color='#555'">Nastavení cookies</a>
     </div>
   </div>
   <div class="footer-rainbow"></div>

@@ -32,6 +32,7 @@
 <meta name="twitter:title" content="Stránka nenalezena — Svět autismu">
 <meta name="twitter:description" content="Stránka, kterou hledáte, na tomto webu není.">
 <meta name="twitter:image" content="https://www.svetautismu.cz/assets/og/og-image.jpg">
+<script src="/site.js" defer></script>
 </head>
 <body>
 
@@ -81,18 +82,6 @@
     </div>
   </div>
 </header>
-<script>
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('mainNav');
-  if (!toggle || !nav) return;
-  toggle.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-})();
-</script>
 
 <section class="page-hero">
   <div class="page-hero-rainbow"></div>
@@ -189,6 +178,7 @@
       <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
       <a href="/nabidka-prace.html">Kariéra</a>
       <a href="/kontakt.html">Kontakt</a>
+      <a href="#" data-cookie-settings>Nastavení cookies</a>
     </div>
   </div>
   <div class="footer-rainbow"></div>

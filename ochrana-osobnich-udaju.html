@@ -96,6 +96,7 @@
   ]
 }
 </script>
+<script src="site.js" defer></script>
 </head>
 <body>
 
@@ -145,18 +146,6 @@
     </div>
   </div>
 </header>
-<script>
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('mainNav');
-  if (!toggle || !nav) return;
-  toggle.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-})();
-</script>
 
 <section class="page-hero">
   <div class="page-hero-rainbow"></div>
@@ -171,42 +160,48 @@
 
 <section>
   <div class="section-narrow prose">
-    <h2>Kdo jsme</h2>
-    <p>Provozovatelem těchto stránek je <strong>Svět autismu, z. s.</strong> — Centrum služeb pro děti a další osoby se specifickými potřebami.</p>
-    <ul>
-      <li>Sídlo: U Dráhy 318, 253 03 Chýně</li>
-      <li>Provozovna: V Pískách 297, Chýně</li>
-      <li>IČ: 17958083 · Datová schránka: 93bqui9</li>
-      <li>Spisová značka: L 77139 vedená u Městského soudu v Praze</li>
-      <li>Web: <a href="https://www.svetautismu.cz" target="_blank" rel="noopener">www.svetautismu.cz</a></li>
-    </ul>
+<h2>Kdo jsme</h2>
+<p>Provozovatelem těchto stránek je <strong>Svět autismu, z. s.</strong> — Centrum služeb pro děti a další osoby se specifickými potřebami.</p>
+<ul>
+<li>Sídlo: U Dráhy 318, 253 03 Chýně</li>
+<li>Provozovna: V Pískách 297, Chýně</li>
+<li>IČ: 17958083 · Datová schránka: 93bqui9</li>
+<li>Spisová značka: L 77139 vedená u Městského soudu v Praze</li>
+<li>Web: <a href="https://www.svetautismu.cz" target="_blank" rel="noopener">www.svetautismu.cz</a></li>
+</ul>
 
-    <h2>Komentáře</h2>
-    <p>Když návštěvníci přidají komentář na tento web, jsou shromažďovány údaje zobrazené ve formuláři pro komentář, dále IP adresa návštěvníka a řetězec user agent prohlížeče, což napomáhá k detekci spamu. Službě Gravatar může být poskytnut anonymizovaný řetězec vytvořený z vaší e-mailové adresy. Po schválení komentáře je váš profilový obrázek viditelný spolu s vaším komentářem.</p>
+<h2>Co o vás zjišťujeme</h2>
+<p>Tyto stránky jsou statické — nemají uživatelské účty, diskuze ani databázi, do které by se cokoli ukládalo. <strong>Sami o vás neshromažďujeme žádné osobní údaje.</strong> Jediné, co se zpracovává, popisujeme níže.</p>
 
-    <h2>Média</h2>
-    <p>Pokud nahráváte obrázky na tento web, měli byste se vyhnout nahrávání snímků s vloženými údaji o poloze (EXIF GPS). Návštěvníci webu mohou stáhnout a zobrazit libovolné údaje o poloze ze snímků.</p>
+<h2>Kontaktní formulář</h2>
+<p>Formulář na stránce Kontakt neodesílá data na náš server — pouze otevře váš poštovní program s předvyplněnou zprávou. Text tedy odchází běžným e-mailem a my ho zpracujeme stejně jako kterýkoli jiný dopis: použijeme ho k zodpovězení vašeho dotazu a uchováme po dobu nezbytnou k vyřízení věci.</p>
 
-    <h2>Cookies</h2>
-    <p>Pokud na naše stránky přidáte komentář, můžete povolit uložení jména, e-mailové adresy a webové stránky do cookies. Tyto údaje slouží pro vaše pohodlí a uchovávají se po dobu jednoho roku. Pokud navštívíte naši přihlašovací stránku, nastavíme dočasné cookie pro ověření, zda prohlížeč cookies přijímá. Přihlašovací cookies mají platnost dva dny, cookies pro nastavení zobrazení jeden rok. Při výběru „Zapamatovat si mě" se přihlášení uchová po dobu dvou týdnů.</p>
+<h2>Měření návštěvnosti a cookies</h2>
+<p>Rádi bychom věděli, kolik lidí web navštíví a které stránky je zajímají. K tomu používáme <strong>Google Analytics 4</strong>, které si do vašeho prohlížeče uloží cookies a zpracovává údaje o vaší návštěvě — navštívené stránky, přibližnou polohu na úrovni města, typ zařízení a prohlížeče a zdroj, odkud jste přišli.</p>
+<p><strong>Měření se spustí jedině s vaším souhlasem.</strong> Dokud na liště nekliknete na „Souhlasím", žádné cookies se neukládají a Google se o vaší návštěvě nedozví. Web je plně funkční i bez souhlasu — nic tím neztrácíte.</p>
+<p>Souhlas platí jeden rok, odmítnutí půl roku — pak se zeptáme znovu. Změnit svou volbu můžete kdykoli odkazem <strong>„Nastavení cookies"</strong> v patičce každé stránky. Ukládá se jen ve vašem prohlížeči, takže na jiném zařízení se zeptáme znovu.</p>
+<p>Právním základem tohoto zpracování je váš souhlas podle čl. 6 odst. 1 písm. a) GDPR a § 89 odst. 3 zákona č. 127/2005 Sb., o elektronických komunikacích.</p>
 
-    <h2>Vložený obsah z dalších webů</h2>
-    <p>Příspěvky na těchto stránkách mohou obsahovat vložený obsah (například videa, obrázky, články atd.). Vložený obsah z jiných webových stránek se chová stejně, jako kdyby návštěvník navštívil jiný web. Tyto webové stránky mohou shromažďovat data o vás, používat cookies a sledovat vaši interakci s vloženým obsahem.</p>
+<h2>Kdo má k údajům přístup</h2>
+<ul>
+<li><strong>Google Ireland Limited</strong> — provozovatel Google Analytics, pokud jste k měření dali souhlas.</li>
+<li><strong>GitHub, Inc.</strong> — na jeho službě GitHub Pages jsou stránky umístěné. Jako každý webový server zaznamenává technické údaje o požadavcích včetně IP adresy; slouží to k provozu a bezpečnosti služby.</li>
+</ul>
+<p>Obě společnosti mohou údaje zpracovávat i mimo Evropskou unii, a to na základě standardních smluvních doložek schválených Evropskou komisí. Vaše údaje nikomu neprodáváme ani nepředáváme k marketingovým účelům.</p>
 
-    <h2>S kým sdílíme vaše údaje</h2>
-    <p>Pokud požadujete obnovení hesla, vaše IP adresa bude uvedena v e-mailu pro obnovení hesla.</p>
+<h2>Jak dlouho údaje uchováváme</h2>
+<ul>
+<li>Údaje z Google Analytics: 2 měsíce, pak se automaticky mažou.</li>
+<li>E-mailová korespondence: po dobu nezbytnou k vyřízení vašeho dotazu.</li>
+<li>Vaše volba ohledně cookies: souhlas jeden rok, odmítnutí půl roku — uložená pouze ve vašem prohlížeči.</li>
+</ul>
 
-    <h2>Jak dlouho uchováváme vaše údaje</h2>
-    <p>Pokud přidáte komentář, jsou tento komentář i jeho metadata uchovávána po neomezenou dobu, díky čemuž jsme schopni rozpoznat a schválit případné navazující komentáře automaticky. U uživatelů, kteří se registrují, uchováváme rovněž osobní údaje, které uvádějí ve svém profilu. Všichni uživatelé mohou kdykoliv vidět, upravovat nebo smazat své osobní údaje (s výjimkou toho, že nemohou změnit své uživatelské jméno).</p>
+<h2>Jaká máte práva</h2>
+<p>Podle GDPR máte právo vědět, jaké údaje o vás zpracováváme, žádat jejich opravu nebo výmaz, omezit zpracování, vznést proti němu námitku a získat své údaje v přenositelné podobě. Souhlas s měřením návštěvnosti můžete kdykoli odvolat, aniž by to mělo vliv na zákonnost dosavadního zpracování.</p>
+<p>Máte také právo podat stížnost u <a href="https://www.uoou.cz" target="_blank" rel="noopener">Úřadu pro ochranu osobních údajů</a>.</p>
 
-    <h2>Jaká máte práva</h2>
-    <p>Pokud máte na tomto webu účet nebo jste zde přidali komentáře, můžete požádat o obdržení souboru s exportem osobních údajů, které o vás uchováváme, včetně všech údajů, které jste nám poskytli. Můžete také požádat o vymazání veškerých osobních údajů, které o vás uchováváme. Tato možnost nezahrnuje údaje, které jsme povinni uchovávat z administrativních, právních nebo bezpečnostních důvodů.</p>
-
-    <h2>Kam posíláme vaše data</h2>
-    <p>Komentáře návštěvníků mohou být kontrolovány prostřednictvím automatické služby detekce spamu.</p>
-
-    <blockquote>S jakýmkoliv dotazem ohledně zpracování vašich osobních údajů se na nás můžete obrátit na <a href="mailto:svetautismu@svetautismu.cz">svetautismu@svetautismu.cz</a>.</blockquote>
-  </div>
+<blockquote>S jakýmkoliv dotazem ohledně zpracování vašich osobních údajů se na nás můžete obrátit na <a href="mailto:svetautismu@svetautismu.cz">svetautismu@svetautismu.cz</a>.</blockquote>
+</div>
 </section>
 
 <footer class="site-footer">
@@ -253,6 +248,7 @@
       <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
       <a href="nabidka-prace.html">Kariéra</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="#" data-cookie-settings>Nastavení cookies</a>
     </div>
   </div>
   <div class="footer-rainbow"></div>

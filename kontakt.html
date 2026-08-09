@@ -96,6 +96,7 @@
   ]
 }
 </script>
+<script src="site.js" defer></script>
 </head>
 <body>
 
@@ -145,18 +146,6 @@
     </div>
   </div>
 </header>
-<script>
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('mainNav');
-  if (!toggle || !nav) return;
-  toggle.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-})();
-</script>
 
 <section class="page-hero">
   <div class="page-hero-rainbow"></div>
@@ -226,11 +215,11 @@
         <span class="section-label">Napište nám</span>
         <h2 class="section-title" style="text-align:left;">Máte dotaz?</h2>
         <p style="color:#666; margin:-4px 0 24px;">Vyplňte formulář a my se vám co nejdříve ozveme.</p>
-        <form class="contact-form" id="kontakt-form">
+        <form class="contact-form" id="contact-form">
           <div class="form-row">
             <div class="form-field">
-              <label for="jmeno">Jméno a příjmení</label>
-              <input id="jmeno" type="text" placeholder="Vaše jméno">
+              <label for="name">Jméno a příjmení</label>
+              <input id="name" type="text" placeholder="Vaše jméno">
             </div>
             <div class="form-field">
               <label for="email">E-mail</label>
@@ -238,12 +227,12 @@
             </div>
           </div>
           <div class="form-field">
-            <label for="predmet">Předmět</label>
-            <input id="predmet" type="text" placeholder="Čeho se dotaz týká">
+            <label for="subject">Předmět</label>
+            <input id="subject" type="text" placeholder="Čeho se dotaz týká">
           </div>
           <div class="form-field">
-            <label for="zprava">Zpráva</label>
-            <textarea id="zprava" placeholder="Napište nám, s čím vám můžeme pomoci…"></textarea>
+            <label for="message">Zpráva</label>
+            <textarea id="message" placeholder="Napište nám, s čím vám můžeme pomoci…"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Odeslat zprávu</button>
           <p style="font-size:13px; color:#888; margin-top:4px;">Tlačítko otevře váš e-mailový program s předvyplněnou zprávou. Pokud ho nemáte nastavený, napište nám přímo na <a href="mailto:svetautismu@svetautismu.cz" style="color:#4a90d9;font-weight:600;">svetautismu@svetautismu.cz</a>.</p>
@@ -332,27 +321,12 @@
       <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
       <a href="nabidka-prace.html">Kariéra</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="#" data-cookie-settings>Nastavení cookies</a>
     </div>
   </div>
   <div class="footer-rainbow"></div>
 </footer>
 
-<script>
-(function () {
-  var form = document.getElementById('kontakt-form');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var to = 'svetautismu' + '@' + 'svetautismu.cz';
-    var val = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-    var subject = val('predmet') || 'Dotaz z webu';
-    var body = val('zprava') + '\n\n--\nOdesílatel: ' + val('jmeno') + '\nE-mail: ' + val('email');
-    window.location.href = 'mailto:' + to +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
-  });
-})();
-</script>
 
 </body>
 </html>
