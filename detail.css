@@ -277,6 +277,9 @@ section { padding: 64px 0; }
   font-size: 44px; color: #fff; cursor: pointer; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden;
 }
 .gallery-tile:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.18); }
+/* Dlaždice s fotkou místo emoji — odkaz na stránku alba */
+a.gallery-tile { text-decoration: none; }
+.gallery-tile img.tile-cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .gallery-tile span.cap {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 12px 10px;
   background: linear-gradient(transparent, rgba(0,0,0,0.55)); color: #fff; font-size: 12.5px; font-weight: 600; text-align: left;

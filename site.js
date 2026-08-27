@@ -194,7 +194,7 @@
           'Rádi bychom měřili návštěvnost webu, abychom věděli, co vás zajímá. ' +
           'K tomu používáme Google Analytics, které si do prohlížeče uloží ' +
           'cookies. Bez vašeho souhlasu se nespustí a web funguje i bez nich. ' +
-          'Podrobnosti najdete v <a href="ochrana-osobnich-udaju.html">' +
+          'Podrobnosti najdete v <a href="/ochrana-osobnich-udaju/">' +
           'zásadách ochrany osobních údajů</a>.' +
         '</div>' +
         '<div class="sa-cookie-actions">' +
@@ -202,13 +202,6 @@
           '<button type="button" class="accept">Souhlasím</button>' +
         '</div>' +
       '</div>';
-
-    // Na 404.html a v přesměrováních musí odkaz na zásady vést z kořene,
-    // protože ty stránky se zobrazují i na hlubokých adresách.
-    if (location.pathname.split('/').length > 2) {
-      var link = banner.querySelector('.sa-cookie-text a');
-      if (link) link.setAttribute('href', '/ochrana-osobnich-udaju.html');
-    }
 
     banner.querySelector('.accept').addEventListener('click', function () {
       saveConsent('yes');
