@@ -9,7 +9,8 @@
 # a přes robots.txt se to řešit nedá — zákaz procházení by vyhledávači jen
 # zabránil ten pokyn přečíst.
 #
-# Přesměrování ze starých adres (web-root/*/index.html) se záměrně neblokují.
+# Přesměrování ze starých adres (web-root/<stará-cesta>/index.html, viz
+# redirects.tsv) se záměrně neblokují.
 # Musí být procházitelná, jinak se přes ně nepřenese hodnocení starých adres
 # na nové stránky.
 
