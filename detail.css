@@ -148,6 +148,15 @@ section { padding: 64px 0; }
   color: #444; font-style: italic;
 }
 .lede { font-size: 19px; line-height: 1.7; color: #444; margin-bottom: 24px; }
+/* Tlačítko v textu článku — .prose a by jinak přebarvilo text */
+.prose a.btn { text-decoration: none; }
+.prose a.btn-primary { color: #fff; }
+
+/* Fotky v aktualitě o albu — náhledy s odkazem do fotogalerie */
+.news-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 8px 0 20px; }
+.news-photos a { display: block; border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 3; background: #f0f4ff; }
+.news-photos img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
+.news-photos a:hover img { transform: scale(1.04); }
 
 /* ===== GENERIC CARD GRIDS ===== */
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
@@ -432,6 +441,7 @@ a.gallery-tile { text-decoration: none; }
 }
 @media (max-width: 640px) {
   .funding-logos { grid-template-columns: 1fr; }
+  .news-photos { gap: 6px; }
   .header-inner { flex-wrap: wrap; height: auto; padding: 12px 16px; gap: 12px; justify-content: center; }
   .logo { order: 1; }
   .logo .logo-name { font-size: 30px; }

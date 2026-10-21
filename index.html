@@ -363,6 +363,8 @@ img { max-width: 100%; height: auto; display: block; }
   overflow: hidden;
 }
 .hero-news-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.35); }
+/* Karta má dva odkazy: hlavní část vede na článek, patička na přehled aktualit */
+.hero-news-main { display: block; color: inherit; }
 .hero-news-label {
   display: inline-flex;
   align-items: center;
@@ -386,6 +388,9 @@ img { max-width: 100%; height: auto; display: block; }
   50% { box-shadow: 0 0 0 8px rgba(232,93,154,0); }
 }
 .hero-news-date { font-size: 13px; color: #888; margin-bottom: 10px; }
+/* Štítek „Poslední aktualita" a datum na jednom řádku, datum vpravo */
+.hero-news-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+.hero-news-head .hero-news-label, .hero-news-head .hero-news-date { margin-bottom: 0; }
 .hero-news-title {
   font-size: 20px;
   font-weight: 800;
@@ -404,13 +409,14 @@ img { max-width: 100%; height: auto; display: block; }
   overflow: hidden;
 }
 .hero-news-link {
-  display: inline-block;
+  display: block;
+  text-align: right;
   font-size: 14px;
   font-weight: 600;
   color: #4a90d9;
   margin-bottom: 20px;
 }
-.hero-news-card:hover .hero-news-link { color: #3a7bc8; }
+.hero-news-main:hover .hero-news-link { color: #3a7bc8; }
 .hero-news-footer {
   margin: 0 -28px;
   padding: 12px 28px;
@@ -421,7 +427,9 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 13px;
   color: #888;
   background: #fafbfc;
+  transition: background .2s, color .2s;
 }
+.hero-news-footer:hover { background: #f0f4ff; color: #4a90d9; }
 .hero-news-arrow { color: #4a90d9; font-size: 18px; font-weight: 700; }
 
 /* ===== QUICK-ACCESS BOXES (nadacesirius.cz style) ===== */
@@ -1190,19 +1198,23 @@ section { padding: 72px 0; }
       </div>
     </div>
     <div class="hero-visual">
-      <a href="aktuality/" class="hero-news-card">
-        <div class="hero-news-label">
-          <span class="hero-news-dot"></span> Poslední aktualita
-        </div>
-        <div class="hero-news-date">9. 8. 2026</div>
-        <h3 class="hero-news-title">Nové webové stránky</h3>
-        <p class="hero-news-excerpt">S radostí vám představujeme nové webové stránky. Připravili jsme je tak, aby byly přehlednější a abyste v nabídce našich služeb snadno našli vše potřebné.</p>
-        <span class="hero-news-link">Číst celý článek →</span>
-        <div class="hero-news-footer">
+      <div class="hero-news-card">
+        <a href="aktuality/uprava-webovych-stranek/" class="hero-news-main">
+          <div class="hero-news-head">
+            <div class="hero-news-label">
+              <span class="hero-news-dot"></span> Poslední aktualita
+            </div>
+            <div class="hero-news-date">9. 8. 2026</div>
+          </div>
+          <h3 class="hero-news-title">Nové webové stránky</h3>
+          <p class="hero-news-excerpt">S radostí vám představujeme nové webové stránky. Připravili jsme je tak, aby byly přehlednější a abyste v nabídce našich služeb snadno našli vše potřebné.</p>
+          <span class="hero-news-link">Číst celý článek →</span>
+        </a>
+        <a href="aktuality/" class="hero-news-footer">
           <span>Další aktuality</span>
           <span class="hero-news-arrow">›</span>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </section>
