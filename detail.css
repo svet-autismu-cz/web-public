@@ -158,6 +158,32 @@ section { padding: 64px 0; }
 .news-photos img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
 .news-photos a:hover img { transform: scale(1.04); }
 
+/* ===== MÉDIA — dlaždice pro posun na sekce, karty videí a článků ===== */
+.media-jump { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+.media-jump a { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 30px 22px; border-radius: 18px; color: #fff; text-decoration: none; transition: transform .25s, box-shadow .25s; }
+.media-jump a:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,0.18); }
+.media-jump .mj-icon { font-size: 40px; line-height: 1; }
+.media-jump .mj-title { font-size: 22px; font-weight: 800; }
+.media-jump .mj-sub { font-size: 14px; opacity: .9; }
+.media-jump .mj-go { margin-top: 4px; font-size: 13px; font-weight: 700; opacity: .85; }
+.media-section + .media-section { border-top: 1px solid #eef2f8; }
+.media-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; max-width: 1100px; margin: 0 auto 24px; }
+.media-head h2 { font-size: 30px; font-weight: 800; color: #1a1a2e; letter-spacing: -0.5px; }
+.media-head h2 span { margin-right: 8px; }
+.media-top { font-size: 13px; font-weight: 600; color: #4a90d9; white-space: nowrap; }
+.media-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+.media-card { background: #fff; border: 1px solid #eef2f8; border-radius: 16px; overflow: hidden; display: block; color: inherit; text-decoration: none; transition: transform .25s, box-shadow .25s; }
+.media-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.10); }
+.media-thumb { position: relative; aspect-ratio: 16 / 9; background: #1a1a2e; }
+.media-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video-play { position: absolute; inset: 0; margin: auto; width: 68px; height: 48px; border-radius: 14px; background: rgba(232,40,40,.92); }
+.video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+.media-body { padding: 16px 20px 20px; }
+.media-meta { font-size: 13px; color: #888; margin-bottom: 6px; }
+.media-card h3 { font-size: 18px; font-weight: 700; color: #1a1a2e; line-height: 1.35; margin-bottom: 8px; }
+.media-card p { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 10px; }
+.media-link { font-size: 13px; font-weight: 700; color: #4a90d9; }
+
 /* ===== GENERIC CARD GRIDS ===== */
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
@@ -419,6 +445,10 @@ a.gallery-tile { text-decoration: none; }
   .funding-inner { grid-template-columns: 1fr; gap: 28px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
+/* Lepící hlavička (jen nad 1300 px) by jinak zakryla nadpis sekce na Médiích */
+@media (min-width: 1301px) {
+  .media-section { scroll-margin-top: 110px; }
+}
 @media (min-width: 641px) and (max-width: 1300px) {
   .site-header { position: static; }
   .header-inner { flex-wrap: wrap; height: auto; padding: 16px 24px; }
@@ -430,6 +460,9 @@ a.gallery-tile { text-decoration: none; }
   .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 4px 8px; }
 }
 @media (max-width: 820px) {
+  .media-jump { grid-template-columns: 1fr; }
+  .media-jump a { flex-direction: row; text-align: left; padding: 18px 20px; }
+  .media-jump .mj-go { display: none; }
   .job-cols { grid-template-columns: 1fr; }
   .job-card { padding: 24px 20px; }
   .job-note { margin-left: 0; flex-basis: 100%; }
