@@ -21,7 +21,7 @@
 
   <url>
     <loc>https://www.svetautismu.cz/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -42,11 +42,17 @@
 
   <url>
     <loc>https://www.svetautismu.cz/aktuality/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.svetautismu.cz/aktuality/napsali-o-nas-chynsky-zpravodaj/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://www.svetautismu.cz/aktuality/napsali-o-nas-repska-sedmnactka/</loc>
     <lastmod>2026-10-25</lastmod>
@@ -118,7 +124,7 @@
 
   <url>
     <loc>https://www.svetautismu.cz/media/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
