@@ -77,7 +77,8 @@
      který lištu vyvolá znovu.
   */
 
-  var GA_ID = 'G-2D4XV4PHYS';
+  var GA_ID = 'G-2D4XV4PHYS';      // Google Analytics 4
+  var ADS_ID = 'AW-18507122773';   // Google Ads (konverze, remarketing)
   var STORAGE_KEY = 'sa-cookie-consent';
   var CONSENT_DAYS = 365;   // platnost souhlasu
   var REFUSAL_DAYS = 180;   // platnost odmítnutí
@@ -120,13 +121,24 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { window.dataLayer.push(arguments); }
     window.gtag = gtag;
+    // Consent Mode v2: bez výslovného „granted" Google Ads v EU neměří
+    // konverze ani remarketing. Sem se kód dostane jen po souhlasu na liště.
+    gtag('consent', 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted'
+    });
     gtag('js', new Date());
+    // Jedna knihovna gtag.js, dva cíle — tak to Google předepisuje
+    // („nepřidávejte víc než jednu značku Google na stránku").
     gtag('config', GA_ID);
+    gtag('config', ADS_ID);
   }
 
-  /* Odvolání souhlasu musí uklidit i cookies, které Google Analytics stihlo
-     nastavit — jinak by po odmítnutí zůstaly v prohlížeči ležet. Maže se
-     _ga, _ga_<ID> a starší _gid/_gat, a to jak na aktuálním jménu, tak na
+  /* Odvolání souhlasu musí uklidit i cookies, které Google Analytics a Ads
+     stihly nastavit — jinak by po odmítnutí zůstaly v prohlížeči ležet. Maže
+     se _ga, _ga_<ID>, starší _gid/_gat a reklamní _gcl_* (_gcl_au …), a to jak na aktuálním jménu, tak na
      doméně s tečkou (na tu je GA ukládá, aby platily i pro subdomény). */
   function deleteAnalyticsCookies() {
     var parts = document.cookie.split(';');
@@ -138,7 +150,7 @@
 
     for (var i = 0; i < parts.length; i++) {
       var name = parts[i].split('=')[0].trim();
-      if (!/^_ga|^_gid$|^_gat/.test(name)) continue;
+      if (!/^_ga|^_gid$|^_gat|^_gcl_/.test(name)) continue;
       for (var d = 0; d < domains.length; d++) {
         document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' +
           (domains[d] ? '; domain=' + domains[d] : '');
@@ -191,9 +203,10 @@
     banner.innerHTML =
       '<div class="sa-cookie-in">' +
         '<div class="sa-cookie-text">' +
-          'Rádi bychom měřili návštěvnost webu, abychom věděli, co vás zajímá. ' +
-          'K tomu používáme Google Analytics, které si do prohlížeče uloží ' +
-          'cookies. Bez vašeho souhlasu se nespustí a web funguje i bez nich. ' +
+          'Rádi bychom měřili návštěvnost webu, abychom věděli, co vás zajímá, ' +
+          'a vyhodnocovali účinnost našich reklam. K tomu používáme Google ' +
+          'Analytics a Google Ads, které si do prohlížeče uloží cookies. ' +
+          'Bez vašeho souhlasu se nespustí a web funguje i bez nich. ' +
           'Podrobnosti najdete v <a href="/ochrana-osobnich-udaju/">' +
           'zásadách ochrany osobních údajů</a>.' +
         '</div>' +
